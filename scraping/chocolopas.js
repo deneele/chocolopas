@@ -4,12 +4,12 @@ module.exports = async (page, website) =>{
     const {selectors} = website;
     await page.goto(website.url);
     //Login
-        await page.waitForSelector('#username');
-        await page.type('#username', 'CLIENTE');
-        await page.waitForSelector('#password');
-        await page.type('#password', 'cliente1');
-        await page.waitForSelector('#submitLogin1');
-        await page.click('#submitLogin1');
+        await page.waitForSelector('#Usuario');
+        await page.type('#Usuario', '4637B_01');
+        await page.waitForSelector('#contrasena');
+        await page.type('#contrasena', 'GugiGagr2686*');
+        await page.waitForSelector('#formularioLogIn > table > thead > tr:nth-child(5) > td > input');
+        await page.click('#formularioLogIn > table > thead > tr:nth-child(5) > td > input');
     //Selecciona el link para mostrar los productos
         await page.waitForSelector(selectors.trendsLink);
         await page.click(selectors.trendsLink);
